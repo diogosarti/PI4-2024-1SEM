@@ -31,6 +31,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #2D4BA6;
 }
 
+.auth-section-bg{
+  background: url('/public/img/bg-hero.svg') fixed center center/cover;
+  background-color: #2D4BA6;
+}
+
 .parallax1 > use {
   animation: move-forever1 12s linear infinite;
 }
