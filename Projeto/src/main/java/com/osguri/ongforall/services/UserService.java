@@ -18,7 +18,6 @@ public class UserService {
     private BCryptPasswordEncoder passwordEncoder;
 
     public User save(RegisterUserDTO userDTO) throws Exception{
-        System.out.println("passei no serviço");
         User user = userRepository.findByEmail(userDTO.email());
         if(user != null){
             throw new Exception("User already exists");

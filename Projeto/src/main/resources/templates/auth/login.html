@@ -16,7 +16,7 @@
     
           <form th:action="@{/auth/login}" method="post">
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Email">
+              <input name="username" id="username" type="email" class="form-control" placeholder="Email">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-envelope"></span>
@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Senha">
+              <input name="password" id="password" type="password" class="form-control" placeholder="Senha">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-lock"></span>
