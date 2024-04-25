@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+  <head th:insert="~{fragments/dashboardfragments :: dashboardIndex}"></head>
+  <body class="hold-transition login-page">
+    
+
+    <div class="login-box">
+      <!-- /.login-logo -->
+      <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+          <a th:href="@{/}"><img class="py-2" th:src="@{/assets/img/logo.svg}" width="150" alt=""></a>
+          <!-- <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a> -->
+        </div>
+        <div class="card-body">
+          <p class="login-box-msg">Registre-se</p>
+    
+          <form th:action="@{/auth/register}" method="post">
+            <div class="input-group mb-3">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Nome">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-envelope"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-envelope"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input name="password" id="password" type="password" class="form-control" placeholder="Senha">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <!-- /.col -->
+              <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+          <!-- /.social-auth-links -->
+  
+          <p class="mb-0 mt-3 d-flex gap-2 justify-content-center">
+            <span>Possui uma conta? </span>
+            <a th:href="@{/auth/login}" class="text-center">Entrar</a>
+          </p>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.login-box -->
+    
+    <!-- jQuery -->
+    <script th:src="@{/assets/dashboard/plugins/jquery/jquery.min.js}"></script>
+    <!-- Bootstrap 4 -->
+    <script th:src="@{/assets/dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <!-- AdminLTE App -->
+    <script th:src="@{/assets/dashboard/dist/js/adminlte.min.js}"></script>
+  </body>
+</html>
