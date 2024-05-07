@@ -3,10 +3,6 @@ package com.osguri.ongforall.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.osguri.ongforall.repositories.RoleRepository;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

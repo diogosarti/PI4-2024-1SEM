@@ -3,12 +3,10 @@ package com.osguri.ongforall.entities;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import jakarta.transaction.Transactional;
 
 public class CustomUserDetails implements UserDetails {
     private User user;
