@@ -8,6 +8,8 @@ import com.osguri.ongforall.entities.User;
 import com.osguri.ongforall.entities.dtos.RegisterUserDTO;
 import com.osguri.ongforall.repositories.UserRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class UserService {
     
@@ -31,6 +33,11 @@ public class UserService {
         user.setPassword(passwordEncoded);
 
         return userRepository.save(user);
+    }
+
+    @Transactional
+    public User findByEmail(String email){
+        return userRepository.findByEmail(email);
     }
 
 }

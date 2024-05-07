@@ -10,6 +10,8 @@ import com.osguri.ongforall.entities.CustomUserDetails;
 import com.osguri.ongforall.entities.User;
 import com.osguri.ongforall.repositories.UserRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
@@ -18,6 +20,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 
     @Override
+    @Transactional
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email);
         if (user == null) {
