@@ -66,7 +66,7 @@ public class AuthResource {
             Authentication auth = authenticationManager.authenticate(authReq);
             SecurityContextHolder.getContext().setAuthentication(auth);
 
-            return "redirect:auth/redirect";
+            return "redirect:auth/login?registersuccess=true";
         } catch (Exception exception) {
             System.out.println(exception);
             return "redirect:auth/register?error=true";

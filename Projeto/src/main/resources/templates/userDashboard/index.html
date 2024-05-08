@@ -7,17 +7,17 @@
   <div class="wrapper">
 
     <!-- Navbar -->
-    <nav th:insert="~{fragments/dashboardfragments :: userDashboardNavbar}"></nav>
+    <nav th:replace="~{fragments/dashboardfragments :: userDashboardNavbar}"></nav>
     <!-- /.navbar -->
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" id="conteudo">
+    <div class="content-wrapper" id="conteudo" style="padding: 1rem 0;">
       <div th:replace="~{userDashboard/partials/InitialONGs :: dashboardOngContent}" />
     </div>
     <!-- /.content-wrapper -->
 
     <!-- Main Footer -->
-    <footer th:insert="~{fragments/dashboardfragments :: userDashboardFooter}"></footer>
+    <footer th:replace="~{fragments/dashboardfragments :: userDashboardFooter}"></footer>
   </div>
 
   <!-- /.login-box -->

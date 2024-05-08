@@ -1,494 +1,467 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="~{fragments/indexfragments :: headIndex}"></head>
-  <body>
-    <header th:replace="~{fragments/indexfragments :: headerIndex }" />
 
-    <section th:replace="~{fragments/indexfragments :: heroSectionIndex }" />
+<head th:replace="~{fragments/indexfragments :: headIndex}"></head>
 
-    <main id="main">
-      <!-- ======= Values Section ======= -->
-      <section id="about" class="values">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Sobre</h2>
-            <p>Plataforma que concentra todas as ONGs em um so lugar!</p>
-          </header>
-          <div class="row">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="box">
-                <img src="assets/img/values-1.png" class="img-fluid" alt="" />
-                <h3>Diversas ONGs</h3>
-                <p>Encontre a ONG perfeita para doar e faça a diferença hoje mesmo!</p>
+<body>
+  <header th:replace="~{fragments/indexfragments :: headerIndex }" />
+
+  <section th:replace="~{fragments/indexfragments :: heroSectionIndex }" />
+
+  <main id="main">
+    <!-- ======= Values Section ======= -->
+    <section id="about" class="values">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Sobre</h2>
+          <p>Plataforma que concentra todas as ONGs em um so lugar!</p>
+        </header>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <img src="assets/img/values-1.png" class="img-fluid" alt="" />
+              <h3>Diversas ONGs</h3>
+              <p>Encontre a ONG perfeita para doar e faça a diferença hoje mesmo!</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <img src="assets/img/values-2.png" class="img-fluid" alt="" />
+              <h3>ONGs pelo mundo todo</h3>
+              <p>
+                Uma plataforma global que conecta organizações não governamentais (ONGs) de todo o mundo.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="assets/img/values-3.png" class="img-fluid" alt="" />
+              <h3>Praticidade e eficiência</h3>
+              <p>
+                Uma solução prática e eficiente para conectar ONGs globalmente, promovendo colaboração instantânea e
+                otimizando o uso de recursos para maximizar o impacto das iniciativas sociais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Values Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="135" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>ONGs</p>
               </div>
             </div>
-
-            <div
-              class="col-lg-4 mt-4 mt-lg-0"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="box">
-                <img src="assets/img/values-2.png" class="img-fluid" alt="" />
-                <h3>ONGs pelo mundo todo</h3>
-                <p>
-                  Uma plataforma global que conecta organizações não governamentais (ONGs) de todo o mundo.
-                </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="ri-wallet-3-line" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="9239" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Doações</p>
               </div>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style="color: #bb0852"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="3214" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Usuários</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-headset" style="color: #15be56"></i>
+              <div>
+                <div style="display: flex;">
+                  <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
+                    class="purecounter"></span><span>h</span>
+                </div>
 
-            <div
-              class="col-lg-4 mt-4 mt-lg-0"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="box">
-                <img src="assets/img/values-3.png" class="img-fluid" alt="" />
-                <h3>Praticidade e eficiência</h3>
-                <p>
-                  Uma solução prática e eficiente para conectar ONGs globalmente, promovendo colaboração instantânea e otimizando o uso de recursos para maximizar o impacto das iniciativas sociais.
-                </p>
+                <p>Suporte 24/7</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- End Values Section -->
+      </div>
+    </section>
+    <!-- End Counts Section -->
 
-      <!-- ======= Counts Section ======= -->
-      <section id="counts" class="counts">
-        <div class="container" data-aos="fade-up">
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-emoji-smile"></i>
-                <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="135"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>ONGs</p>
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Características</h2>
+          <p>Nossa Plataforma Fornece</p>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/img/features.png" class="img-fluid" alt="" />
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+            <div class="row align-self-center gy-4">
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Segurança</h3>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="ri-wallet-3-line" style="color: #ee6c20;"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="9239" data-purecounter-duration="1" class="purecounter"></span>
-                  <p>Doações</p>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Praticidade</h3>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-people" style="color: #bb0852"></i>
-                <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="3214"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Usuários</p>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>ONGs de todo mundo</h3>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-headset" style="color: #15be56"></i>
-                <div>
-                  <div style="display: flex;">
-                    <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="24"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span><span>h</span>
-                  </div>
-                  
-                  <p>Suporte 24/7</p>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Eficiência</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Comprometimento</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Lealdade</h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- End Counts Section -->
+        <!-- / row -->
 
-      <!-- ======= Features Section ======= -->
-      <section id="features" class="features">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Características</h2>
-            <p>Nossa Plataforma Fornece</p>
-          </header>
+        <!-- Feature Tabs -->
+        <div class="row feture-tabs" data-aos="fade-up">
+          <div class="col-lg-6">
+            <h3>Descubra e Conecte-se</h3>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li>
+                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Encontre sua Causa</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Faça sua Diferença</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Seu Apoio em Ação</a>
+              </li>
+            </ul>
+            <!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab1">
+                <p>
+                  Explore uma variedade de ONGs e suas missões, desde proteção ambiental até educação infantil e saúde
+                  pública.
+                  Navegue por nossas categorias para descobrir organizações alinhadas com seus valores e interesses.
+                  Cada ONG possui uma página detalhada com informações sobre sua missão, projetos atuais e formas de
+                  doação.
+                </p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>
+                    Explore as ONGs
+                  </h4>
+                </div>
+                <p>
+                  Aqui você encontrará uma ampla variedade de ONGs, cada uma com sua própria missão única e impacto
+                  significativo.
+                </p>
+              </div>
+              <!-- End Tab 1 Content -->
+
+              <div class="tab-pane fade show" id="tab2">
+                <p>
+                  Descubra as diferentes formas de fazer sua doação e impactar positivamente a causa que você escolher.
+                  Oferecemos várias opções seguras e convenientes para contribuir com as ONGs, desde doações únicas até
+                  compromissos de longo prazo.
+                  Saiba como sua generosidade pode fazer a diferença e comece a fazer o bem hoje mesmo.
+                </p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>
+                    Como Doar
+                  </h4>
+                </div>
+                <p>
+                  Na nossa plataforma, facilitamos ao máximo o processo de doação para que você possa fazer sua
+                  diferença de forma rápida e segura.
+                  Seja qual for sua preferência, oferecemos diversas opções para você poder contribuir!
+                </p>
+              </div>
+              <!-- End Tab 2 Content -->
+
+              <div class="tab-pane fade show" id="tab3">
+                <p>
+                  Comprometemo-nos com a transparência e a prestação de contas.
+                  Saiba mais sobre como avaliamos o impacto das ONGs e garantimos que suas doações sejam usadas de forma
+                  eficaz e responsável.
+                  Acompanhe o progresso das organizações que você apoia e veja o impacto positivo que sua generosidade
+                  está causando no mundo.
+                </p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>
+                    Transparência e Impacto
+                  </h4>
+                </div>
+                <p>
+                  Acreditamos na importância da transparência e da prestação de contas em todas as etapas do processo de
+                  doação.
+                  É por isso que nos comprometemos a fornecer a você informações claras e detalhadas sobre o impacto do
+                  seu apoio.
+                </p>
+              </div>
+              <!-- End Tab 3 Content -->
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <img src="assets/img/features-2.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <!-- End Feature Tabs -->
+
+        <!-- Feature Icons -->
+        <div class="row feature-icons" data-aos="fade-up">
+          <h3>Nossos diferenciais.</h3>
 
           <div class="row">
-            <div class="col-lg-6">
-              <img src="assets/img/features.png" class="img-fluid" alt="" />
+            <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/features-3.png" class="img-fluid p-4" alt="" />
             </div>
 
-            <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+            <div class="col-xl-8 d-flex content">
               <div class="row align-self-center gy-4">
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Segurança</h3>
+                <div class="col-md-6 icon-box" data-aos="fade-up">
+                  <i class="ri-line-chart-line"></i>
+                  <div>
+                    <h4>Impacto local e global</h4>
+                    <p>
+                      Encontre ONGs que atuam na sua região ou em qualquer lugar do mundo, promovendo a mudança social
+                      em diferentes escalas.
+                    </p>
                   </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Praticidade</h3>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="ri-stack-line"></i>
+                  <div>
+                    <h4>Segurança e confiabilidade</h4>
+                    <p>
+                      Utilize uma plataforma segura e confiável com tecnologia de ponta para proteger seus dados e
+                      garantir a transparência das transações.
+                    </p>
                   </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>ONGs de todo mundo</h3>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="ri-brush-4-line"></i>
+                  <div>
+                    <h4>Suporte dedicado</h4>
+                    <p>
+                      Conte com uma equipe especializada para auxiliar na sua busca por ONGs, doações e investimentos.
+                    </p>
                   </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Eficiência</h3>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="ri-magic-line"></i>
+                  <div>
+                    <h4>Gamificação e engajamento</h4>
+                    <p>
+                      A plataforma incentiva a doação recorrente e o investimento contínuo através de elementos de
+                      gamificação, recompensando seu comprometimento com o impacto social.
+                    </p>
                   </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Comprometimento</h3>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class="ri-command-line"></i>
+                  <div>
+                    <h4>Eventos exclusivos</h4>
+                    <p>
+                      Participe de eventos online e presenciais promovidos pela plataforma. Esses eventos reúnem grandes
+                      nomes do impacto social, proporcionando oportunidades únicas de networking, aprendizagem e
+                      inspiração.
+                    </p>
                   </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Lealdade</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- / row -->
-
-          <!-- Feature Tabs -->
-          <div class="row feture-tabs" data-aos="fade-up">
-            <div class="col-lg-6">
-              <h3>Descubra e Conecte-se</h3>
-
-              <!-- Tabs -->
-              <ul class="nav nav-pills mb-3">
-                <li>
-                  <a class="nav-link active" data-bs-toggle="pill" href="#tab1"
-                    >Encontre sua Causa</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link" data-bs-toggle="pill" href="#tab2"
-                    >Faça sua Diferença</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link" data-bs-toggle="pill" href="#tab3"
-                    >Seu Apoio em Ação</a
-                  >
-                </li>
-              </ul>
-              <!-- End Tabs -->
-
-              <!-- Tab Content -->
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="tab1">
-                  <p>
-                      Explore uma variedade de ONGs e suas missões, desde proteção ambiental até educação infantil e saúde pública.
-                   Navegue por nossas categorias para descobrir organizações alinhadas com seus valores e interesses.
-                    Cada ONG possui uma página detalhada com informações sobre sua missão, projetos atuais e formas de doação.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>
-                      Explore as ONGs
-                    </h4>
-                  </div>
-                  <p>
-                    Aqui você encontrará uma ampla variedade de ONGs, cada uma com sua própria missão única e impacto significativo.
-                  </p>
-                </div>
-                <!-- End Tab 1 Content -->
-
-                <div class="tab-pane fade show" id="tab2">
-                  <p>
-                    Descubra as diferentes formas de fazer sua doação e impactar positivamente a causa que você escolher. 
-                    Oferecemos várias opções seguras e convenientes para contribuir com as ONGs, desde doações únicas até compromissos de longo prazo.
-                     Saiba como sua generosidade pode fazer a diferença e comece a fazer o bem hoje mesmo.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>
-                      Como Doar
-                    </h4>
-                  </div>
-                  <p>
-                    Na nossa plataforma, facilitamos ao máximo o processo de doação para que você possa fazer sua diferença de forma rápida e segura.
-                     Seja qual for sua preferência, oferecemos diversas opções para você poder contribuir!
-                  </p>  
-                </div>
-                <!-- End Tab 2 Content -->
-
-                <div class="tab-pane fade show" id="tab3">
-                  <p>
-                    Comprometemo-nos com a transparência e a prestação de contas. 
-                    Saiba mais sobre como avaliamos o impacto das ONGs e garantimos que suas doações sejam usadas de forma eficaz e responsável. 
-                    Acompanhe o progresso das organizações que você apoia e veja o impacto positivo que sua generosidade está causando no mundo.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>
-                      Transparência e Impacto
-                    </h4>
-                  </div>
-                  <p>
-                    Acreditamos na importância da transparência e da prestação de contas em todas as etapas do processo de doação. 
-                    É por isso que nos comprometemos a fornecer a você informações claras e detalhadas sobre o impacto do seu apoio. 
-                  </p>
-                </div>
-                <!-- End Tab 3 Content -->
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <img src="assets/img/features-2.png" class="img-fluid" alt="" />
-            </div>
-          </div>
-          <!-- End Feature Tabs -->
-
-          <!-- Feature Icons -->
-          <div class="row feature-icons" data-aos="fade-up">
-            <h3>Nossos diferenciais.</h3>
-
-            <div class="row">
-              <div
-                class="col-xl-4 text-center"
-                data-aos="fade-right"
-                data-aos-delay="100"
-              >
-                <img
-                  src="assets/img/features-3.png"
-                  class="img-fluid p-4"
-                  alt=""
-                />
-              </div>
-
-              <div class="col-xl-8 d-flex content">
-                <div class="row align-self-center gy-4">
-                  <div class="col-md-6 icon-box" data-aos="fade-up">
-                    <i class="ri-line-chart-line"></i>
-                    <div>
-                      <h4>Impacto local e global</h4>
-                      <p>
-                        Encontre ONGs que atuam na sua região ou em qualquer lugar do mundo, promovendo a mudança social em diferentes escalas.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                  >
-                    <i class="ri-stack-line"></i>
-                    <div>
-                      <h4>Segurança e confiabilidade</h4>
-                      <p>
-                        Utilize uma plataforma segura e confiável com tecnologia de ponta para proteger seus dados e garantir a transparência das transações.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
-                    <i class="ri-brush-4-line"></i>
-                    <div>
-                      <h4>Suporte dedicado</h4>
-                      <p>
-                        Conte com uma equipe especializada para auxiliar na sua busca por ONGs, doações e investimentos.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                  >
-                    <i class="ri-magic-line"></i>
-                    <div>
-                      <h4>Gamificação e engajamento</h4>
-                      <p>
-                        A plataforma incentiva a doação recorrente e o investimento contínuo através de elementos de gamificação, recompensando seu comprometimento com o impacto social.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
-                    <i class="ri-command-line"></i>
-                    <div>
-                      <h4>Eventos exclusivos</h4>
-                      <p>
-                        Participe de eventos online e presenciais promovidos pela plataforma. Esses eventos reúnem grandes nomes do impacto social, proporcionando oportunidades únicas de networking, aprendizagem e inspiração.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="500"
-                  >
-                    <i class="ri-radar-line"></i>
-                    <div>
-                      <h4>Streamlining de processos</h4>
-                      <p>
-                        Simplificamos a burocracia tradicional do investimento social. Através de um processo digitalizado e eficiente, você investe em ONGs com rapidez e facilidade. Dedique mais tempo para o que realmente importa: gerar impacto social.
-                      </p>
-                    </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                  <i class="ri-radar-line"></i>
+                  <div>
+                    <h4>Streamlining de processos</h4>
+                    <p>
+                      Simplificamos a burocracia tradicional do investimento social. Através de um processo digitalizado
+                      e eficiente, você investe em ONGs com rapidez e facilidade. Dedique mais tempo para o que
+                      realmente importa: gerar impacto social.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End Feature Icons -->
         </div>
-      </section>
-      <!-- End Features Section -->
+        <!-- End Feature Icons -->
+      </div>
+    </section>
+    <!-- End Features Section -->
 
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Serviços</h2>
-            <p>Estes são alguns de nossos serviços presentes em nossa plataforma</p>
-          </header>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Serviços</h2>
+          <p>Estes são alguns de nossos serviços presentes em nossa plataforma</p>
+        </header>
 
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-box blue">
-                <i class="ri-discuss-line icon"></i>
-                <h3>Conexão com Investidores</h3>
-                <p>
-                  A plataforma pode fornecer um serviço de conexão direta entre ONGs e investidores interessados em apoiar projetos que tenham um impacto positivo em áreas como educação, saúde, meio ambiente, entre outros.
-                </p>
-                
-              </div>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box blue">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Conexão com Investidores</h3>
+              <p>
+                A plataforma pode fornecer um serviço de conexão direta entre ONGs e investidores interessados em apoiar
+                projetos que tenham um impacto positivo em áreas como educação, saúde, meio ambiente, entre outros.
+              </p>
+
             </div>
+          </div>
 
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-box orange">
-                <i class="ri-discuss-line icon"></i>
-                <h3>Informações abrangentes das ONGs</h3>
-                <p>
-                  Inclui descrição da missão da ONG, histórico de projetos, equipe de gestão, relatórios financeiros, indicadores de impacto e outros dados relevantes.
-                </p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box orange">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Informações abrangentes das ONGs</h3>
+              <p>
+                Inclui descrição da missão da ONG, histórico de projetos, equipe de gestão, relatórios financeiros,
+                indicadores de impacto e outros dados relevantes.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box green">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Histórias de impacto</h3>
+              <p>
+                Apresentar histórias reais de como as doações e investimentos da plataforma geraram mudanças positivas
+                na vida das pessoas.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-box red">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Relatórios de due diligence</h3>
+              <p>
+                Fornecer aos investidores e doadores relatórios detalhados sobre as ONGs, incluindo riscos e
+                oportunidades de investimento.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-box purple">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Análise documental</h3>
+              <p>
+                Verificar a documentação legal e financeira das ONGs para garantir legitimidade e transparência.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-box pink">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Investimento em projetos específicos</h3>
+              <p>
+                Permitir que investidores financiem projetos específicos das ONGs com acompanhamento do progresso e
+                retorno do investimento.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Planos</h2>
+          <p>Confira nossos planos</p>
+        </header>
+
+        <div class="pricing-content">
+          <div class="pricing-content-free">
+            <h1>Gratuíto para sempre! 🎉</h1>
+            <p>Nosso objetivo é apenas facilitar sua doação para várias ONGs, não cobramos taxas e você ainda recebe
+              atualizações sobre o que está sendo feito com sua doação</p>
+          </div>
+          <div class="pricing-content-howhelp">
+            <h2>Como posso ajudar a Uppye?</h2>
+            <p>Faça sua doação para a gente também!</p>
+            <div class="pricing-content-howhelp-container">
+              <div class="pricing-content-howhelp-right">
+                <img th:src="@{/assets/img/qrcodepix.png}" alt="">
+                <p style="padding-bottom: 0;">Razão Social: Instituiçao Uppye</p>
+                <p style="padding: 0;">CNPJ: 95.043.434/0001-85</p>
+              </div>
+
+              <div class="pricing-content-howhelp-left">
+                <h4>Como isso vai ajudar?</h4>
+              </div>
               
-              </div>
             </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="service-box green">
-                <i class="ri-discuss-line icon"></i>
-                <h3>Histórias de impacto</h3>
-                <p>
-                  Apresentar histórias reais de como as doações e investimentos da plataforma geraram mudanças positivas na vida das pessoas.
-                </p>
-                
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="service-box red">
-                <i class="ri-discuss-line icon"></i>
-                <h3>Relatórios de due diligence</h3>
-                <p>
-                  Fornecer aos investidores e doadores relatórios detalhados sobre as ONGs, incluindo riscos e oportunidades de investimento.
-                </p>
-                
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="service-box purple">
-                <i class="ri-discuss-line icon"></i>
-                <h3>Análise documental</h3>
-                <p>
-                  Verificar a documentação legal e financeira das ONGs para garantir legitimidade e transparência.
-                </p>
-                
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="700"
-            >
-              <div class="service-box pink">
-                <i class="ri-discuss-line icon"></i>
-                <h3>Investimento em projetos específicos</h3>
-                <p>
-                  Permitir que investidores financiem projetos específicos das ONGs com acompanhamento do progresso e retorno do investimento.
-                </p>
-                
-              </div>
-            </div>
+            
           </div>
+
         </div>
-      </section>
-      <!-- End Services Section -->
 
-      <!-- ======= Pricing Section ======= -->
-      <section id="pricing" class="pricing">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Planos</h2>
-            <p>Confira nossos planos</p>
-          </header>
-
-          <div class="row gy-4 pricing-container " data-aos="fade-left">
+        <!-- <div class="row gy-4 pricing-container " data-aos="fade-left">
             <div
               class="col-lg-3 col-md-6"
               data-aos="zoom-in"
@@ -561,474 +534,373 @@
                 <a href="#" class="btn-buy">Adquirir</a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Pricing Section -->
+          </div> -->
+      </div>
+    </section>
+    <!-- End Pricing Section -->
 
-      <!-- ======= F.A.Q Section ======= -->
-      <section id="faq" class="faq">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Perguntas</h2>
-            <p>Perguntas frequentes</p>
-          </header>
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Perguntas</h2>
+          <p>Perguntas frequentes</p>
+        </header>
 
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- F.A.Q List 1-->
-              <div class="accordion accordion-flush" id="faqlist1">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-1"
-                    >
-                    Como posso ter certeza de que minha doação será utilizada de forma eficaz pela ONG que escolher investir através da plataforma?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq-content-1"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div class="accordion-body">
-                      A plataforma implementa medidas rigorosas de transparência e prestação de contas para garantir que suas doações sejam utilizadas de maneira eficaz e impactante pelas organizações não governamentais (ONGs) cadastradas.
-                      
-                    </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- F.A.Q List 1-->
+            <div class="accordion accordion-flush" id="faqlist1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-1">
+                    Como posso ter certeza de que minha doação será utilizada de forma eficaz pela ONG que escolher
+                    investir através da plataforma?
+                  </button>
+                </h2>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    A plataforma implementa medidas rigorosas de transparência e prestação de contas para garantir que
+                    suas doações sejam utilizadas de maneira eficaz e impactante pelas organizações não governamentais
+                    (ONGs) cadastradas.
+
                   </div>
                 </div>
+              </div>
 
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-2"
-                    >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-2">
                     Como posso saber se uma ONG é confiável e legítima antes de investir através da plataforma?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq-content-2"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div class="accordion-body">
-                      Antes de investir em uma ONG através da plataforma, realizamos uma rigorosa verificação do status legal e da credibilidade da organização. Cada ONG cadastrada passa por um processo de avaliação detalhado, no qual verificamos sua legalidade, transparência financeira e histórico de atividades.
-                    </div>
+                  </button>
+                </h2>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Antes de investir em uma ONG através da plataforma, realizamos uma rigorosa verificação do status
+                    legal e da credibilidade da organização. Cada ONG cadastrada passa por um processo de avaliação
+                    detalhado, no qual verificamos sua legalidade, transparência financeira e histórico de atividades.
                   </div>
                 </div>
+              </div>
 
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-3"
-                    >
-                    Posso investir em projetos específicos de uma ONG ou minha doação será utilizada de forma geral pela organização?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq-content-3"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div class="accordion-body">
-                      Na plataforma, você tem a flexibilidade de escolher como deseja direcionar sua doação. Algumas ONGs oferecem a opção de investir em projetos específicos, enquanto outras preferem utilizar os recursos de forma geral para apoiar todas as suas atividades.
-                    </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-3">
+                    Posso investir em projetos específicos de uma ONG ou minha doação será utilizada de forma geral pela
+                    organização?
+                  </button>
+                </h2>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Na plataforma, você tem a flexibilidade de escolher como deseja direcionar sua doação. Algumas ONGs
+                    oferecem a opção de investir em projetos específicos, enquanto outras preferem utilizar os recursos
+                    de forma geral para apoiar todas as suas atividades.
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="col-lg-6">
-              <!-- F.A.Q List 2-->
-              <div class="accordion accordion-flush" id="faqlist2">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq2-content-1"
-                    >
+          <div class="col-lg-6">
+            <!-- F.A.Q List 2-->
+            <div class="accordion accordion-flush" id="faqlist2">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-1">
                     Como posso acompanhar o impacto da minha doação ao longo do tempo?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq2-content-1"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist2"
-                  >
-                    <div class="accordion-body">
-                      Na plataforma, você terá acesso a relatórios regulares sobre o progresso e o impacto dos projetos financiados pelas ONGs. Esses relatórios fornecem informações detalhadas sobre como sua doação está sendo utilizada e o impacto positivo que está gerando.
-                    </div>
+                  </button>
+                </h2>
+                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    Na plataforma, você terá acesso a relatórios regulares sobre o progresso e o impacto dos projetos
+                    financiados pelas ONGs. Esses relatórios fornecem informações detalhadas sobre como sua doação está
+                    sendo utilizada e o impacto positivo que está gerando.
                   </div>
                 </div>
+              </div>
 
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq2-content-2"
-                    >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-2">
                     Existe algum valor mínimo ou máximo de doação para investir através da plataforma?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq2-content-2"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist2"
-                  >
-                    <div class="accordion-body">
-                      Na plataforma, não há um valor mínimo ou máximo de doação estabelecido. Você pode fazer uma doação de qualquer valor, desde que esteja dentro das políticas e diretrizes da ONG que escolher apoiar.
-                    </div>
+                  </button>
+                </h2>
+                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    Na plataforma, não há um valor mínimo ou máximo de doação estabelecido. Você pode fazer uma doação
+                    de qualquer valor, desde que esteja dentro das políticas e diretrizes da ONG que escolher apoiar.
                   </div>
                 </div>
+              </div>
 
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq2-content-3"
-                    >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-3">
                     Posso cancelar minha doação ou alterar o valor a qualquer momento?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq2-content-3"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist2"
-                  >
-                    <div class="accordion-body">
-                      Sim, você pode cancelar sua doação ou alterar o valor a qualquer momento, desde que o projeto ou a ONG ainda não tenha recebido o financiamento total necessário.
-                    </div>
+                  </button>
+                </h2>
+                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    Sim, você pode cancelar sua doação ou alterar o valor a qualquer momento, desde que o projeto ou a
+                    ONG ainda não tenha recebido o financiamento total necessário.
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- End F.A.Q Section -->
+      </div>
+    </section>
+    <!-- End F.A.Q Section -->
 
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="testimonials">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Depoimentos</h2>
-            <p>Avaliações e comentarios</p>
-          </header>
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Depoimentos</h2>
+          <p>Avaliações e comentarios</p>
+        </header>
 
-          <div
-            class="testimonials-slider swiper"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    Estou muito impressionado com a plataforma que conecta ONGs a investidores. É incrível ver como eles facilitam o processo de doação e investimento, proporcionando transparência e confiabilidade em cada etapa.Parabéns à equipe por criar uma plataforma tão impactante e necessária!
-                  </p>
-                  <div class="profile mt-auto">
-                    <img
-                      src="assets/img/testimonials/testimonials-1.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Saul Goodman</h3>
-                    <h4>Empresário</h4>
-                  </div>
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    Esta plataforma é exatamente o que eu estava procurando! Finalmente, tenho a oportunidade de investir de forma direta e transparente em projetos que realmente importam para mim. A facilidade de uso e a variedade de opções disponíveis tornam o processo de doação muito mais gratificante.
-                  </p>
-                  <div class="profile mt-auto">
-                    <img
-                      src="assets/img/testimonials/testimonials-2.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
-                  </div>
+                <p>
+                  Estou muito impressionado com a plataforma que conecta ONGs a investidores. É incrível ver como eles
+                  facilitam o processo de doação e investimento, proporcionando transparência e confiabilidade em cada
+                  etapa.Parabéns à equipe por criar uma plataforma tão impactante e necessária!
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="" />
+                  <h3>Saul Goodman</h3>
+                  <h4>Empresário</h4>
                 </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    Descobri esta plataforma ao procurar maneiras mais significativas de contribuir para causas importantes. Estou impressionado com a facilidade de encontrar ONGs alinhadas aos meus valores e com a transparência em todo o processo de investimento.
-                  </p>
-                  <div class="profile mt-auto">
-                    <img
-                      src="assets/img/testimonials/testimonials-3.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Jena Karlis</h3>
-                    <h4>Jornalista</h4>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    Estou emocionado por ter encontrado esta plataforma! É reconfortante saber que posso contribuir diretamente para projetos e causas que realmente me tocam. A transparência e a facilidade de uso desta plataforma são impressionantes.
-                  </p>
-                  <div class="profile mt-auto">
-                    <img
-                      src="assets/img/testimonials/testimonials-4.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Matt Brandon</h3>
-                    <h4>Freelancer</h4>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>
-                    Esta plataforma é um verdadeiro game changer! Como alguém que sempre quis apoiar causas sociais, mas ficava perdido sobre como fazer isso de forma eficaz, estou emocionado por finalmente encontrar uma solução tão simples e transparente.
-                  </p>
-                  <div class="profile mt-auto">
-                    <img
-                      src="assets/img/testimonials/testimonials-5.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>John Larson</h3>
-                    <h4>Programador</h4>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
-
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Maiores ONGs</h2>
-            <p>ONGs parceiras</p>
-          </header>
-
-          <div class="clients-slider swiper">
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-1.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-2.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-3.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-4.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-5.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-6.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-7.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/img/clients/client-8.png"
-                  class="img-fluid"
-                  alt=""
-                />
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Esta plataforma é exatamente o que eu estava procurando! Finalmente, tenho a oportunidade de investir
+                  de forma direta e transparente em projetos que realmente importam para mim. A facilidade de uso e a
+                  variedade de opções disponíveis tornam o processo de doação muito mais gratificante.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Descobri esta plataforma ao procurar maneiras mais significativas de contribuir para causas
+                  importantes. Estou impressionado com a facilidade de encontrar ONGs alinhadas aos meus valores e com a
+                  transparência em todo o processo de investimento.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="" />
+                  <h3>Jena Karlis</h3>
+                  <h4>Jornalista</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Estou emocionado por ter encontrado esta plataforma! É reconfortante saber que posso contribuir
+                  diretamente para projetos e causas que realmente me tocam. A transparência e a facilidade de uso desta
+                  plataforma são impressionantes.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="" />
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Esta plataforma é um verdadeiro game changer! Como alguém que sempre quis apoiar causas sociais, mas
+                  ficava perdido sobre como fazer isso de forma eficaz, estou emocionado por finalmente encontrar uma
+                  solução tão simples e transparente.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
+                  <h3>John Larson</h3>
+                  <h4>Programador</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
           </div>
+          <div class="swiper-pagination"></div>
         </div>
-      </section>
-      <!-- End Clients Section -->
+      </div>
+    </section>
+    <!-- End Testimonials Section -->
 
-      <!-- ======= Contact Section ======= -->
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Maiores ONGs</h2>
+          <p>ONGs parceiras</p>
+        </header>
 
-      <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Contatos</h2>
-            <p>Nossos contatos</p>
-          </header>
-      
-          <div class="row gy-4">
-            <div class="col-lg-6">
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <!-- ======= Contact Section ======= -->
+
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Contatos</h2>
+          <p>Nossos contatos</p>
+        </header>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box text-center">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p>central@uppye.com<br />suporte@uppye.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box text-center">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Telefones</h3>
+                  <p>+11 5589 55488 55<br />+11 6678 254445 41</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box text-center">
+                  <i class="bi bi-clock"></i>
+                  <h3>Horario de funcionamento</h3>
+                  <p>Segunda - Domingo<br />24 Horas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form">
               <div class="row gy-4">
                 <div class="col-md-6">
-                  <div class="info-box text-center">
-                    <i class="bi bi-envelope"></i>
-                    <h3>Email</h3>
-                    <p>central@ongforall.com<br />suporte@ongforall.com</p>
-                  </div>
+                  <input type="text" name="name" class="form-control" placeholder="Digite seu Nome" required />
                 </div>
+
                 <div class="col-md-6">
-                  <div class="info-box text-center">
-                    <i class="bi bi-telephone"></i>
-                    <h3>Telefones</h3>
-                    <p>+11 5589 55488 55<br />+11 6678 254445 41</p>
-                  </div>
+                  <input type="email" class="form-control" name="email" placeholder="Digite seu email" required />
                 </div>
-                <div class="col-md-6">
-                  <div class="info-box text-center">
-                    <i class="bi bi-clock"></i>
-                    <h3>Horario de funcionamento</h3>
-                    <p>Segunda - Domingo<br />24 Horas</p>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Assunto" required />
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Digite sua mensagem"
+                    required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Digite sua mensagem.
                   </div>
+                  <button type="submit">Enviar</button>
                 </div>
               </div>
-            </div>
-
-            <div class="col-lg-6">
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row gy-4">
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Digite seu Nome" required />
-                  </div>
-      
-                  <div class="col-md-6">
-                    <input type="email" class="form-control" name="email" placeholder="Digite seu email" required />
-                  </div>
-      
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Assunto" required />
-                  </div>
-      
-                  <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Digite sua mensagem" required></textarea>
-                  </div>
-      
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Digite sua mensagem.
-                    </div>
-                    <button type="submit">Enviar</button>
-                  </div>
-                </div>
-              </form>
-            </div>
+            </form>
           </div>
         </div>
-      </section>
-      
-      <!-- End Contact Section -->
-    </main>
-    <!-- End #main -->
+      </div>
+    </section>
 
-    <script th:src="@{/assets/js/boxicons.js}"></script>
-    <script
-      th:src="@{assets/vendor/purecounter/purecounter_vanilla.js}"
-    ></script>
-    <script th:src="@{assets/vendor/aos/aos.js}"></script>
-    <script
-      th:src="@{assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"
-    ></script>
-    <script th:src="@{assets/vendor/glightbox/js/glightbox.min.js}"></script>
-    <script
-      th:src="@{assets/vendor/isotope-layout/isotope.pkgd.min.js}"
-    ></script>
-    <script th:src="@{assets/vendor/swiper/swiper-bundle.min.js}"></script>
-    <script th:src="@{assets/vendor/php-email-form/validate.js}"></script>
+    <!-- End Contact Section -->
+  </main>
+  <!-- End #main -->
 
-    <script th:src="@{/assets/js/main.js}"></script>
-  </body>
+  <script th:src="@{/assets/js/boxicons.js}"></script>
+  <script th:src="@{assets/vendor/purecounter/purecounter_vanilla.js}"></script>
+  <script th:src="@{assets/vendor/aos/aos.js}"></script>
+  <script th:src="@{assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{assets/vendor/glightbox/js/glightbox.min.js}"></script>
+  <script th:src="@{assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{assets/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script th:src="@{assets/vendor/php-email-form/validate.js}"></script>
+
+  <script th:src="@{/assets/js/main.js}"></script>
+</body>
+
 </html>
