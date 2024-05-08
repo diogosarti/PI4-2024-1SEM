@@ -11,6 +11,7 @@ import com.osguri.ongforall.entities.User;
 import com.osguri.ongforall.repositories.UserRepository;
 
 import jakarta.transaction.Transactional;
+import lombok.Data;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

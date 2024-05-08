@@ -1,5 +1,16 @@
 package com.osguri.ongforall.entities.dtos;
 
-public record RegisterUserDTO(String name, String email, String password) {
-    
+import java.util.ArrayList;
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@AllArgsConstructor
+@Data
+public class RegisterUserDTO {
+    private String name;
+    private String email;
+    private String password;
+    private String role;
 }

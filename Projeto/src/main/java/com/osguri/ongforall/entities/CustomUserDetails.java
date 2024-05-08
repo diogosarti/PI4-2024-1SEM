@@ -31,6 +31,10 @@ public class CustomUserDetails implements UserDetails {
         return user.getPassword();
     }
 
+    public String getNomeUsuaio(){
+        return user.getName();
+    }
+
     @Override
     public String getUsername() {
         // TODO Auto-generated method stub

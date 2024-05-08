@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.osguri.ongforall.entities.User;
 import com.osguri.ongforall.entities.dtos.RegisterUserDTO;
+import com.osguri.ongforall.repositories.RoleRepository;
 import com.osguri.ongforall.repositories.UserRepository;
 
 import jakarta.transaction.Transactional;
@@ -17,19 +18,22 @@ public class UserService {
     private UserRepository userRepository;
 
     @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
     public User save(RegisterUserDTO userDTO) throws Exception{
-        User user = userRepository.findByEmail(userDTO.email());
+        User user = userRepository.findByEmail(userDTO.getEmail());
         if(user != null){
             throw new Exception("User already exists");
         }
-        System.out.println("passei no serviço 2");
 
         user = new User();
-        user.setEmail(userDTO.email());
-        user.setName(userDTO.name());
-        String passwordEncoded = passwordEncoder.encode(userDTO.password());
+        user.setEmail(userDTO.getEmail());
+        user.setName(userDTO.getName());
+        String passwordEncoded = passwordEncoder.encode(userDTO.getPassword());
+        user.getRoles().add(roleRepository.findByName(userDTO.getRole()));
         user.setPassword(passwordEncoded);
 
         return userRepository.save(user);
