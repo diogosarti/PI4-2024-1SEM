@@ -1,68 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
-  <head th:insert="~{fragments/dashboardfragments :: dashboardIndex}"></head>
-  <body class="hold-transition login-page">
-    
 
-    <div class="login-box">
-      <!-- /.login-logo -->
-      <div class="card card-outline card-primary">
-        <div class="card-header text-center">
-          <a th:href="@{/}"><img class="py-2" th:src="@{/assets/img/logo.svg}" width="150" alt=""></a>
-          <!-- <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a> -->
-        </div>
-        <div class="card-body">
-          <p class="login-box-msg">Registre-se</p>
-    
-          <form th:action="@{/auth/register}" method="post">
-            <div class="input-group mb-3">
-              <input type="text" id="name" name="name" class="form-control" placeholder="Nome">
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-envelope"></span>
-                </div>
-              </div>
-            </div>
-            <div class="input-group mb-3">
-              <input type="email" id="email" name="email" class="form-control" placeholder="Email">
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-envelope"></span>
-                </div>
-              </div>
-            </div>
-            <div class="input-group mb-3">
-              <input name="password" id="password" type="password" class="form-control" placeholder="Senha">
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-lock"></span>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-center">
-              <div class="w-100">
-                <button type="submit" class="btn btn-primary btn-block">Registrar</button>
-              </div>
-            </div>
-          </form>
-          <!-- /.social-auth-links -->
-  
-          <p class="mb-0 mt-3 d-flex gap-2 justify-content-center">
-            <span>Possui uma conta? </span>
-            <a th:href="@{/auth/login}" class="text-center">Entrar</a>
-          </p>
-        </div>
-        <!-- /.card-body -->
+<head th:insert="~{fragments/dashboardfragments :: dashboardIndex}"></head>
+
+
+<body class="hold-transition login-page">
+  <div class="login-box">
+    <div class="card card-outline card-primary">
+      <div class="card-header text-center">
+        <a th:href="@{/}"><img class="py-2" th:src="@{/assets/img/logo.svg}" width="150" alt=""></a>
       </div>
-      <!-- /.card -->
+      <div class="card-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="ong-tab" data-toggle="tab" href="#ong" role="tab" aria-controls="ong"
+              aria-selected="true">ONG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pessoaFisica-tab" data-toggle="tab" href="#pessoaFisica" role="tab"
+              aria-controls="pessoaFisica" aria-selected="false">Pessoa Física</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="ong" role="tabpanel" aria-labelledby="ong-tab">
+            <!-- Formulário de registro de ONG -->
+            <form th:action="@{/auth/register}" method="post">
+              <div class="input-group mb-3">
+                <input type="text" id="ongName" name="ongName" class="form-control" placeholder="Nome da ONG">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-building"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" id="cnpj" name="cnpj" class="form-control" placeholder="CNPJ da ONG">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-id-card"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input name="password" id="password" type="password" class="form-control" placeholder="Senha">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="w-100">
+                  <button type="submit" class="btn btn-primary btn-block">Registrar ONG</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pessoaFisica" role="tabpanel" aria-labelledby="pessoaFisica-tab">
+            <!-- Formulário de registro de Pessoa Física -->
+            <form th:action="@{/auth/register}" method="post">
+              <div class="input-group mb-3">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Nome">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="date" id="dataNascimento" name="dataNascimento" class="form-control" placeholder="Data de Nascimento">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-birthday-cake"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <select id="sexo" name="sexo" class="form-control">
+                  <option value="">Selecione o Sexo</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Feminino</option>
+                  <option value="O">Outro</option>
+                </select>
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-venus-mars"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input name="password" id="password" type="password" class="form-control" placeholder="Senha">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="w-100">
+                  <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- /.login-box -->
-    
-    <!-- jQuery -->
-    <script th:src="@{/assets/dashboard/plugins/jquery/jquery.min.js}"></script>
-    <!-- Bootstrap 4 -->
-    <script th:src="@{/assets/dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
-    <!-- AdminLTE App -->
-    <script th:src="@{/assets/dashboard/dist/js/adminlte.min.js}"></script>
-  </body>
+  </div>
+
+  <script th:src="@{/assets/dashboard/plugins/jquery/jquery.min.js}"></script>
+  <script th:src="@{/assets/dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/assets/dashboard/dist/js/adminlte.min.js}"></script>
+  <script>
+    function validateForm() {
+      var name = document.getElementById('ongName').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var cnpj = document.getElementById('cnpj').value;
+  
+      // Validação do nome
+      if (name.length < 3) {
+        alert('O nome deve ter no mínimo três caracteres.');
+        return false;
+      }
+  
+      // Validação do email
+      var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+      if (!emailRegex.test(email)) {
+        alert('Por favor, insira um email válido.');
+        return false;
+      }
+  
+      // Validação da senha
+      var passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert('A senha deve ter no mínimo 8 caracteres, contendo pelo menos 1 número e 1 caractere especial.');
+        return false;
+      }
+  
+      // Validação do CNPJ
+      // Adicione aqui a sua lógica de validação de CNPJ
+  
+      return true;
+    }
+  </script>
+</body>
+
 </html>
