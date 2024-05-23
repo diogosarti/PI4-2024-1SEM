@@ -2496,3 +2496,10 @@ section {
 @media (max-width: 1200px) { 
   
 }
+
+.whats {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+}
