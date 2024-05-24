@@ -3,7 +3,6 @@
 
 <head th:insert="~{fragments/dashboardfragments :: dashboardIndex}"></head>
 
-
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="card card-outline card-primary">
@@ -24,7 +23,7 @@
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="ong" role="tabpanel" aria-labelledby="ong-tab">
             <!-- Formulário de registro de ONG -->
-            <form th:action="@{/auth/register}" method="post">
+            <form id="ongForm" th:action="@{/auth/register}" method="post" onsubmit="return validateONGForm()">
               <div class="input-group mb-3">
                 <input type="text" id="ongName" name="ongName" class="form-control" placeholder="Nome da ONG">
                 <div class="input-group-append">
@@ -66,12 +65,12 @@
           </div>
           <div class="tab-pane fade" id="pessoaFisica" role="tabpanel" aria-labelledby="pessoaFisica-tab">
             <!-- Formulário de registro de Pessoa Física -->
-            <form th:action="@{/auth/register}" method="post">
+            <form id="pessoaFisicaForm" th:action="@{/auth/register}" method="post" onsubmit="return validatePessoaFisicaForm()">
               <div class="input-group mb-3">
                 <input type="text" id="name" name="name" class="form-control" placeholder="Nome">
                 <div class="input-group-append">
                   <div class="input-group-text">
-                    <span class="fas fa-envelope"></span>
+                    <span class="fas fa-user"></span>
                   </div>
                 </div>
               </div>
@@ -97,7 +96,7 @@
                 </div>
               </div>
               <div class="input-group mb-3">
-                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                <input type="email" id="emailPessoaFisica" name="email" class="form-control" placeholder="Email">
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-envelope"></span>
@@ -105,7 +104,7 @@
                 </div>
               </div>
               <div class="input-group mb-3">
-                <input name="password" id="password" type="password" class="form-control" placeholder="Senha">
+                <input name="password" id="passwordPessoaFisica" type="password" class="form-control" placeholder="Senha">
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-lock"></span>
@@ -128,38 +127,133 @@
   <script th:src="@{/assets/dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
   <script th:src="@{/assets/dashboard/dist/js/adminlte.min.js}"></script>
   <script>
-    function validateForm() {
+    function validateONGForm() {
       var name = document.getElementById('ongName').value;
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       var cnpj = document.getElementById('cnpj').value;
-  
+
       // Validação do nome
       if (name.length < 3) {
         alert('O nome deve ter no mínimo três caracteres.');
         return false;
       }
-  
+
       // Validação do email
       var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
       if (!emailRegex.test(email)) {
         alert('Por favor, insira um email válido.');
         return false;
       }
-  
+
       // Validação da senha
       var passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
       if (!passwordRegex.test(password)) {
         alert('A senha deve ter no mínimo 8 caracteres, contendo pelo menos 1 número e 1 caractere especial.');
         return false;
       }
-  
+
       // Validação do CNPJ
-      // Adicione aqui a sua lógica de validação de CNPJ
-  
+      if (!validaCNPJ(cnpj)) {
+        alert('CNPJ inválido. Por favor, verifique o número digitado.');
+        return false;
+      }
+
       return true;
     }
 
+    function validatePessoaFisicaForm() {
+      var name = document.getElementById('name').value;
+      var dataNascimento = document.getElementById('dataNascimento').value;
+      var sexo = document.getElementById('sexo').value;
+      var email = document.getElementById('emailPessoaFisica').value;
+      var password = document.getElementById('passwordPessoaFisica').value;
+
+      // Validação do nome
+      if (name.length < 3) {
+        alert('O nome deve ter no mínimo três caracteres.');
+        return false;
+      }
+
+      // Validação da data de nascimento
+      if (!dataNascimento) {
+        alert('Por favor, insira uma data de nascimento válida.');
+        return false;
+      }
+
+      // Validação do sexo
+      if (!sexo) {
+        alert('Por favor, selecione o sexo.');
+        return false;
+      }
+
+      // Validação do email
+      var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+      if (!emailRegex.test(email)) {
+        alert('Por favor, insira um email válido.');
+        return false;
+      }
+
+      // Validação da senha
+      var passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert('A senha deve ter no mínimo 8 caracteres, contendo pelo menos 1 número e 1 caractere especial.');
+        return false;
+      }
+
+      return true;
+    }
+
+    function validaCNPJ(cnpj) {
+      cnpj = cnpj.replace(/[^\d]+/g, '');
+      if (cnpj == '' || cnpj.length != 14 || /^(\d)\1{13}$/.test(cnpj)) return false;
+
+      // Valida DVs
+      let tamanho = cnpj.length - 2
+      let numeros = cnpj.substring(0, tamanho);
+      let digitos = cnpj.substring(tamanho);
+      let soma = 0;
+      let pos = tamanho - 7;
+      for (let i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2) pos = 9;
+      }
+      let resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(0)) return false;
+
+      tamanho = tamanho + 1;
+      numeros = cnpj.substring(0, tamanho);
+      soma = 0;
+      pos = tamanho - 7;
+      for (let i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2) pos = 9;
+      }
+      resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(1)) return false;
+      return true;
+    }
+
+    document.getElementById('cnpj').addEventListener('input', function (e) {
+      var value = e.target.value;
+      var rawValue = value.replace(/\D/g, ''); // Remove tudo que não é número
+
+      // Verifica se o CNPJ tem 15 dígitos e se o primeiro dígito é '0'
+      if (rawValue.length === 15 && rawValue.startsWith('0')) {
+        // Verifica se, ao remover o '0', o restante é um CNPJ válido
+        var potentialCNPJ = rawValue.substring(1);
+        // Atualiza rawValue para o CNPJ sem o '0' inicial
+        if (validaCNPJ(potentialCNPJ)) rawValue = potentialCNPJ;
+      }
+
+      var cnpjPattern = rawValue
+        .replace(/^(\d{2})(\d)/, '$1.$2') // Adiciona ponto após o segundo dígito
+        .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3') // Adiciona ponto após o quinto dígito
+        .replace(/\.(\d{3})(\d)/, '.$1/$2') // Adiciona barra após o oitavo dígito
+        .replace(/(\d{4})(\d)/, '$1-$2') // Adiciona traço após o décimo segundo dígito
+        .replace(/(-\d{2})\d+?$/, '$1'); // Impede a entrada de mais de 14 dígitos
+      e.target.value = cnpjPattern;
+    });
   </script>
 </body>
 
