@@ -29,18 +29,20 @@ public class InjectDBConfig implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
-        User usuarioPadrao = new User("diogo", "user@teste.com", passwordEncoder.encode("12345678"));
+        User usuarioPadrao = new User("user", "user@teste.com", passwordEncoder.encode("12345678"));
+        User diogo = new User("diogo", "diogosarti13@gmail.com", passwordEncoder.encode("12345678"));
         User administrador = new User("admin", "admin@teste.com", passwordEncoder.encode("12345678"));
         User usuarioong = new User("ong", "ong@teste.com", passwordEncoder.encode("12345678"));
         Role adminRole = new Role("ADMIN");
         Role userRole = new Role("USER");
         Role ongRole = new Role("ONG");
         roleRepository.saveAll(Arrays.asList(adminRole, userRole, ongRole));
+        diogo.getRoles().addAll(Arrays.asList(roleRepository.findByName("USER")));
         usuarioPadrao.getRoles().addAll(Arrays.asList(roleRepository.findByName("USER")));
         administrador.getRoles().addAll(Arrays.asList(roleRepository.findByName("ADMIN")));
         usuarioong.getRoles().addAll(Arrays.asList(roleRepository.findByName("ONG")));
 
-        userRepository.saveAll(Arrays.asList(usuarioPadrao, administrador, usuarioong));
+        userRepository.saveAll(Arrays.asList(usuarioPadrao, administrador, usuarioong, diogo));
     }
 
    
